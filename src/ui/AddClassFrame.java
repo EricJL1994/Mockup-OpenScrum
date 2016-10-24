@@ -198,6 +198,7 @@ public class AddClassFrame extends javax.swing.JFrame {
         if (jList2.getSelectedIndex() != -1) {
             ((UserStory) MainFrame.list.getSelectedValue()).removeClass((Class_) jList2.getSelectedValue());
         }
+        personalInit();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
