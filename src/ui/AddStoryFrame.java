@@ -5,6 +5,7 @@
  */
 package ui;
 
+import java.util.EmptyStackException;
 import javax.swing.JOptionPane;
 import model.UserStory;
 
@@ -146,6 +147,7 @@ public class AddStoryFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
+            if(jTextField1.getText().trim().equals("") || jTextArea1.getText().trim().equals(""))throw new Exception();
             MainFrame.pb.add(new UserStory(jTextField1.getText(), jTextArea1.getText(), Integer.parseInt(jTextField2.getText())));
             MainFrame.refreshList();
             setVisible(false);

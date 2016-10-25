@@ -2,7 +2,6 @@ package ui;
 
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
-import model.Class_;
 import model.ProductBacklog;
 import model.UserStory;
 
@@ -47,8 +46,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         menu = new javax.swing.JMenu();
-        addClassItem = new javax.swing.JMenuItem();
-        separator = new javax.swing.JPopupMenu.Separator();
         closeItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -162,15 +159,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        addClassItem.setText("Classes");
-        addClassItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addClassItemActionPerformed(evt);
-            }
-        });
-        menu.add(addClassItem);
-        menu.add(separator);
-
         closeItem.setText("Close");
         menu.add(closeItem);
 
@@ -234,13 +222,6 @@ public class MainFrame extends javax.swing.JFrame {
         jTextField1.setText("");
     }//GEN-LAST:event_removeStoryButtonActionPerformed
 
-    private void addClassItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassItemActionPerformed
-        if(list.getSelectedIndex()!= -1){
-            AddClassFrame addClassFrame = new AddClassFrame();
-            addClassFrame.setVisible(true);
-        }
-    }//GEN-LAST:event_addClassItemActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -277,7 +258,6 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem addClassItem;
     private javax.swing.JButton addStoryButton;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JMenuItem closeItem;
@@ -292,11 +272,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu menu;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JButton removeStoryButton;
-    private javax.swing.JPopupMenu.Separator separator;
     // End of variables declaration//GEN-END:variables
     public static ProductBacklog pb = new ProductBacklog();
     private static DefaultListModel model;
-    public static ArrayList<Class_> classes = new ArrayList<>();
     
     public static void refreshList(){
         model = new DefaultListModel();

@@ -12,16 +12,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuActionPerformed"/>
           </Events>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="addClassItem">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Classes"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addClassItemActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JPopupMenu$Separator" name="separator">
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="closeItem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Close"/>
